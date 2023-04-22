@@ -1,5 +1,3 @@
-import { TranslatedText } from "./translated-text";
-
 export interface AttributeDto {
   id?: string;
   title: string;
