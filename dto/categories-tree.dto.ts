@@ -1,7 +1,7 @@
 import { TranslatedText } from './translated-text';
 
 export interface CategoriesNodeDto {
-  id?: string;
+  id: string;
   title: TranslatedText;
   description: TranslatedText;
   children: CategoriesNodeDto[];
@@ -10,5 +10,5 @@ export interface CategoriesNodeDto {
 }
 
 export interface CategoriesTreeDto {
-  tree: CategoriesNodeDto;
+  root: CategoriesNodeDto[];
 }
