@@ -1,11 +1,5 @@
 {
   "name": "@shop/shared",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "exports": {
-    ".": "./dist/",
-    "./constants": "./dist/constants",
-    "./constants/product": "./dist/constants/product"
-  }
+  "license": "MIT"
 }

@@ -1,4 +1,4 @@
-import { ProductAdminDto, ProductDto } from "./product.dto";
+import { ProductAdminDto } from './product.dto';
 
 export class ProductListResponseDto {
   products!: ProductAdminDto[];
