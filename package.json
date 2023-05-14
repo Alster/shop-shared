@@ -20,7 +20,7 @@
     "./*": {
       "import": {
         "types": "./lib/esm/types/*.d.ts",
-        "default": "./lib/esm/*.mjs"
+        "default": "./lib/esm/*.js"
       },
       "require": {
         "types": "./lib/cjs/types/*.d.ts",
