@@ -1,4 +1,4 @@
-import { TranslatedText } from './translated-text';
+import { TranslatedText } from '../translated-text';
 
 export type ProductAttributesDto = { [index: string]: string[] };
 

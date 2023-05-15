@@ -1,4 +1,4 @@
-import { TranslatedText } from './translated-text';
+import { TranslatedText } from '../translated-text';
 
 export interface CategoriesNodeDto {
   id: string;
