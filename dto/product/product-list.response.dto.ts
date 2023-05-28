@@ -1,7 +1,7 @@
-import { ProductAdminDto } from './product.dto';
+import { ProductDto } from './product.dto';
 
 export class ProductListResponseDto {
-  products!: ProductAdminDto[];
+  products!: ProductDto[];
   total!: number;
   filters!: { [key: string]: Set<string> };
   categories: string[] = [];
