@@ -4,7 +4,6 @@ export type ProductAttributesDto = { [index: string]: string[] };
 
 export interface ProductItemDto {
   sku: string;
-  qty: number;
   attributes: ProductAttributesDto;
 }
 
