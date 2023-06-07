@@ -1,5 +1,5 @@
 import { OrderStatus } from '../../constants/order';
-import { CreateOrderItemDataDto, DeliveryDataDto } from "../../../shop_shared_server/dto/create-order.dto";
+import { CreateOrderItemDataDto, DeliveryDataDto } from "./create-order.dto";
 
 export interface OrderDto {
   id: string;
