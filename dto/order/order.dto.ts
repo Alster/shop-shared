@@ -9,6 +9,7 @@ export interface OrderDto {
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
   totalPrice: number;
+  currency: string;
   status: OrderStatus;
   createDate: string;
 }
@@ -21,6 +22,7 @@ export interface OrderAdminDto {
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
   totalPrice: number;
+  currency: string;
   status: OrderStatus;
   createDate: string;
 }
