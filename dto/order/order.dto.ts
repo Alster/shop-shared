@@ -12,3 +12,15 @@ export interface OrderDto {
   status: OrderStatus;
   createDate: string;
 }
+
+export interface OrderAdminDto {
+  id: string;
+  lastName: string;
+  firstName: string;
+  phoneNumber: string;
+  itemsData: CreateOrderItemDataDto[];
+  delivery: DeliveryDataDto;
+  totalPrice: number;
+  status: OrderStatus;
+  createDate: string;
+}
