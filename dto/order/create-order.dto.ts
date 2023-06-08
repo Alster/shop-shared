@@ -30,4 +30,5 @@ export type CreateOrderDto = {
   phoneNumber: string;
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
+  currency: string;
 };
