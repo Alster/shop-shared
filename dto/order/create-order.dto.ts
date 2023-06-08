@@ -25,10 +25,10 @@ export type DeliveryDataDto = {
 };
 
 export type CreateOrderDto = {
+  currency: string;
   firstName: string;
   lastName: string;
   phoneNumber: string;
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
-  currency: string;
 };
