@@ -1,6 +1,7 @@
 import { OrderStatus } from '../../constants/order';
 import { CreateOrderItemDataDto, DeliveryDataDto } from './create-order.dto';
 import { MoneySmall } from '../primitiveTypes';
+import { CURRENCY } from '../../constants/exchange';
 
 export interface OrderDto {
   id: string;
@@ -10,7 +11,7 @@ export interface OrderDto {
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
   totalPrice: MoneySmall;
-  currency: string;
+  currency: CURRENCY;
   status: OrderStatus;
   createDate: string;
 }
@@ -23,7 +24,7 @@ export interface OrderAdminDto {
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
   totalPrice: MoneySmall;
-  currency: string;
+  currency: CURRENCY;
   status: OrderStatus;
   createDate: string;
 }
