@@ -1,4 +1,5 @@
 import { TranslatedText } from '../translated-text';
+import { SmallMoney } from '../../../shop_shared_server/dto/primitiveTypes';
 
 export type ProductAttributesDto = { [index: string]: string[] };
 
@@ -16,7 +17,7 @@ export interface ProductDto {
   items: ProductItemDto[];
   attrs: ProductAttributesDto;
   quantity: number;
-  price: number;
+  price: SmallMoney;
   discount: number;
   active: boolean;
   createDate: string;
@@ -31,7 +32,7 @@ export interface ProductAdminDto {
   items: ProductItemDto[];
   attrs: ProductAttributesDto;
   quantity: number;
-  price: number;
+  price: SmallMoney;
   discount: number;
   currency: string;
   active: boolean;
