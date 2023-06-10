@@ -1,5 +1,6 @@
 import { OrderStatus } from '../../constants/order';
 import { CreateOrderItemDataDto, DeliveryDataDto } from './create-order.dto';
+import { SmallMoney } from '../../../shop_shared_server/dto/primitiveTypes';
 
 export interface OrderDto {
   id: string;
@@ -8,7 +9,7 @@ export interface OrderDto {
   phoneNumber: string;
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
-  totalPrice: number;
+  totalPrice: SmallMoney;
   currency: string;
   status: OrderStatus;
   createDate: string;
@@ -21,7 +22,7 @@ export interface OrderAdminDto {
   phoneNumber: string;
   itemsData: CreateOrderItemDataDto[];
   delivery: DeliveryDataDto;
-  totalPrice: number;
+  totalPrice: SmallMoney;
   currency: string;
   status: OrderStatus;
   createDate: string;
