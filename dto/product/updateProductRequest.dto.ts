@@ -15,7 +15,7 @@ import {
   Min,
 } from 'class-validator';
 import { CURRENCY } from '../../constants/exchange';
-import { MoneySmall } from '../../../shop_shared_server/dto/primitiveTypes';
+import { MoneySmall } from '../primitiveTypes';
 
 export class UpdateProductRequestDto implements ProductAdminDto {
   @IsString()

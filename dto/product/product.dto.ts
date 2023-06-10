@@ -1,5 +1,5 @@
 import { TranslatedText } from '../translated-text';
-import { MoneySmall } from '../../../shop_shared_server/dto/primitiveTypes';
+import { MoneySmall } from '../primitiveTypes';
 
 export type ProductAttributesDto = { [index: string]: string[] };
 
