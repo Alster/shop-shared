@@ -3,6 +3,7 @@ import { CreateOrderItemDataDto, DeliveryDataDto } from './create-order.dto';
 import { MoneySmall } from '../primitiveTypes';
 import { CURRENCY } from '../../constants/exchange';
 import { IStatusHistoryEntry } from './IStatusHostoryEntry';
+import { IMonobankWebhookDto } from './Monobank';
 
 export interface OrderDto {
   id: string;
@@ -29,4 +30,8 @@ export interface OrderAdminDto {
   status: OrderStatus;
   createDate: string;
   statusHistory: IStatusHistoryEntry[];
+  lastStatusUpdateDate: Date;
+
+  invoiceId?: string;
+  monoResponse?: IMonobankWebhookDto;
 }
