@@ -1,5 +1,6 @@
 import { ProductAttributesDto } from '../product/product.dto';
 import { NovaPoshtaDeliveryType } from '../../constants/checkout';
+import { CURRENCY } from '../../constants/exchange';
 
 export type CreateOrderItemDataDto = {
   productId: string;
@@ -25,7 +26,7 @@ export type DeliveryDataDto = {
 };
 
 export type CreateOrderDto = {
-  currency: string;
+  currency: CURRENCY;
   firstName: string;
   lastName: string;
   phoneNumber: string;

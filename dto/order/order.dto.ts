@@ -2,7 +2,7 @@ import { OrderStatus } from '../../constants/order';
 import { CreateOrderItemDataDto, DeliveryDataDto } from './create-order.dto';
 import { MoneySmall } from '../primitiveTypes';
 import { CURRENCY } from '../../constants/exchange';
-import { IStatusHistoryEntry } from '../../../shop-shared-server/schema/order.schema';
+import { IStatusHistoryEntry } from './IStatusHostoryEntry';
 
 export interface OrderDto {
   id: string;
