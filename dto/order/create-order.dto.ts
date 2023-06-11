@@ -4,7 +4,7 @@ import { CURRENCY } from '../../constants/exchange';
 
 export type CreateOrderItemDataDto = {
   productId: string;
-  attrs: ProductAttributesDto;
+  attributes: ProductAttributesDto;
   qty: number;
 };
 
