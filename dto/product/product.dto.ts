@@ -10,7 +10,7 @@ export interface ProductItemDto {
 }
 
 export interface ProductDto {
-  id?: string;
+  id: string;
   title: string;
   description: string;
   categories: string[];
