@@ -1,8 +1,8 @@
-import { ProductDto } from './product.dto';
+import {ProductAttributesDto, ProductDto} from './product.dto';
 
 export class ProductListResponseDto {
   products!: ProductDto[];
   total!: number;
-  filters!: { [key: string]: Set<string> };
+  filters!: ProductAttributesDto;
   categories: string[] = [];
 }
