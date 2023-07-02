@@ -11,6 +11,7 @@ export interface ProductItemDto {
 
 export interface ProductDto {
   id: string;
+  publicId: string;
   title: string;
   description: string;
   categories: string[];
@@ -26,6 +27,7 @@ export interface ProductDto {
 
 export interface ProductAdminDto {
   id?: string;
+  publicId: string;
   title: TranslatedText;
   description: TranslatedText;
   categories: string[];
