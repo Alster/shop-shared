@@ -1,6 +1,6 @@
-import { OrderAdminDto } from '../order/order.dto';
+import { OrderAdminDto } from "../order/order.dto";
 
 export class OrderListAdminResponseDto {
-  orders!: OrderAdminDto[];
-  total!: number;
+	orders!: OrderAdminDto[];
+	total!: number;
 }

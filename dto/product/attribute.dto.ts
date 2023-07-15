@@ -1,13 +1,13 @@
 export interface AttributeDto {
-  id?: string;
-  title: string;
-  description: string;
-  key: string;
-  type: string;
-  values: {
-    key: string;
-    title: string;
-  }[];
-  active: boolean;
-  createDate?: string;
+	id?: string;
+	title: string;
+	description: string;
+	key: string;
+	type: string;
+	values: {
+		key: string;
+		title: string;
+	}[];
+	active: boolean;
+	createDate?: string;
 }

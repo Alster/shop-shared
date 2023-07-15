@@ -1,7 +1,7 @@
-import { OrderStatus } from '../../constants/order';
+import { OrderStatus } from "../../constants/order";
 
 export interface IStatusHistoryEntry {
-  status: OrderStatus;
-  date: Date;
-  additionalData?: any;
+	status: OrderStatus;
+	date: Date;
+	additionalData?: any;
 }
