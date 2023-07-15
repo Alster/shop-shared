@@ -1,27 +1,27 @@
-export enum CURRENCY {
+export enum CurrencyEnum {
 	UAH = "UAH",
 	USD = "USD",
 	EUR = "EUR",
 }
 
-export const CURRENCIES = [CURRENCY.UAH, CURRENCY.USD, CURRENCY.EUR];
+export const CURRENCIES = [CurrencyEnum.UAH, CurrencyEnum.USD, CurrencyEnum.EUR];
 
 export const CURRENCY_TO_ISO_4217 = {
-	[CURRENCY.UAH]: 980,
-	[CURRENCY.USD]: 840,
-	[CURRENCY.EUR]: 978,
+	[CurrencyEnum.UAH]: 980,
+	[CurrencyEnum.USD]: 840,
+	[CurrencyEnum.EUR]: 978,
 };
 
 export const ISO_4217_TO_CURRENCY = Object.entries(CURRENCY_TO_ISO_4217).reduce(
 	(accumulator, [key, value]) => {
-		accumulator[value] = key as CURRENCY;
+		accumulator[value] = key as CurrencyEnum;
 		return accumulator;
 	},
-	{} as Record<number, CURRENCY>,
+	{} as Record<number, CurrencyEnum>,
 );
 
 export const CURRENCY_TO_SYMBOL = {
-	[CURRENCY.UAH]: "₴",
-	[CURRENCY.USD]: "$",
-	[CURRENCY.EUR]: "€",
+	[CurrencyEnum.UAH]: "₴",
+	[CurrencyEnum.USD]: "$",
+	[CurrencyEnum.EUR]: "€",
 };

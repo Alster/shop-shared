@@ -1,6 +1,6 @@
-import { CURRENCY } from "../../constants/exchange";
+import { CurrencyEnum } from "../../constants/exchange";
 import { MoneySmall } from "../primitiveTypes";
-import { TranslatedText } from "../translated-text";
+import { TranslatedText } from "../translatedText";
 
 export type ProductAttributesDto = { [index: string]: string[] };
 
@@ -37,7 +37,7 @@ export interface ProductAdminDto {
 	quantity: number;
 	price: MoneySmall;
 	discount: number;
-	currency: CURRENCY;
+	currency: CurrencyEnum;
 	active: boolean;
 	createDate: string;
 }

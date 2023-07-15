@@ -1,9 +1,9 @@
-import { CURRENCY } from "../../constants/exchange";
+import { CurrencyEnum } from "../../constants/exchange";
 import { OrderStatus } from "../../constants/order";
 import { MoneySmall } from "../primitiveTypes";
-import { CreateOrderItemDataDto, DeliveryDataDto } from "./create-order.dto";
-import { IStatusHistoryEntry } from "./IStatusHostoryEntry";
-import { IMonobankWebhookDto } from "./Monobank";
+import { CreateOrderItemDataDto, DeliveryDataDto } from "./createOrder.dto";
+import { IStatusHistoryEntry } from "./iStatusHistoryEntry";
+import { IMonobankWebhookDto } from "./monobank";
 
 export interface OrderDto {
 	id: string;
@@ -13,7 +13,7 @@ export interface OrderDto {
 	itemsData: CreateOrderItemDataDto[];
 	delivery: DeliveryDataDto;
 	totalPrice: MoneySmall;
-	currency: CURRENCY;
+	currency: CurrencyEnum;
 	status: OrderStatus;
 	createDate: string;
 }
@@ -26,7 +26,7 @@ export interface OrderAdminDto {
 	itemsData: CreateOrderItemDataDto[];
 	delivery: DeliveryDataDto;
 	totalPrice: MoneySmall;
-	currency: CURRENCY;
+	currency: CurrencyEnum;
 	status: OrderStatus;
 	createDate: string;
 	statusHistory: IStatusHistoryEntry[];

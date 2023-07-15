@@ -1,5 +1,4 @@
-import { MoneySmall } from "@/shop-shared/dto/primitiveTypes";
-
+import { MoneySmall } from "../primitiveTypes";
 import { ProductAttributesDto, ProductDto } from "./product.dto";
 
 export class ProductListResponseDto {

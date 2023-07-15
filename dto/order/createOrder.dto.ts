@@ -1,5 +1,5 @@
 import { NovaPoshtaDeliveryType } from "../../constants/checkout";
-import { CURRENCY } from "../../constants/exchange";
+import { CurrencyEnum } from "../../constants/exchange";
 import { ProductAttributesDto } from "../product/product.dto";
 
 export type CreateOrderItemDataDto = {
@@ -26,7 +26,7 @@ export type DeliveryDataDto = {
 };
 
 export type CreateOrderDto = {
-	currency: CURRENCY;
+	currency: CurrencyEnum;
 	firstName: string;
 	lastName: string;
 	phoneNumber: string;
