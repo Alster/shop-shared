@@ -21,6 +21,7 @@ export interface ProductDto {
 	quantity: number;
 	price: MoneySmall;
 	discount: number;
+	imagesByColor: Record<string, string[]>;
 	active: boolean;
 	createDate: string;
 }
@@ -38,6 +39,7 @@ export interface ProductAdminDto {
 	price: MoneySmall;
 	discount: number;
 	currency: CurrencyEnum;
+	imagesByColor: Record<string, string[]>;
 	active: boolean;
 	createDate: string;
 }
