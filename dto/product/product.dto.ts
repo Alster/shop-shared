@@ -22,6 +22,7 @@ export interface ProductDto {
 	price: MoneySmall;
 	discount: number;
 	imagesByColor: Record<string, string[]>;
+	selectedColor: string;
 	active: boolean;
 	createDate: string;
 }
