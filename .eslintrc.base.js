@@ -1,8 +1,10 @@
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
 	parser: "@typescript-eslint/parser",
 	plugins: [
 		"@typescript-eslint/eslint-plugin",
 		"prettier",
+		"security",
 		"simple-import-sort",
 		"import",
 		"sonarjs",
@@ -10,15 +12,23 @@ module.exports = {
 	],
 	extends: [
 		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommended",
+		"plugin:security/recommended",
 		"eslint:recommended",
 		"plugin:import/typescript",
 		"plugin:sonarjs/recommended",
 		"plugin:unicorn/all",
+		"plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
 	],
-	root: true,
-	ignorePatterns: [".eslintrc.js"],
 	rules: {
+		"prettier/prettier": [
+			"error",
+			{
+				singleQuote: false,
+				parser: "typescript",
+				endOfLine: "auto",
+				"no-console": "warn",
+			},
+		],
 		"max-len": [
 			"error",
 			{
@@ -29,10 +39,8 @@ module.exports = {
 				ignoreStrings: true,
 			},
 		],
-		semi: [2, "always"],
 		"no-console": "warn",
 		"no-duplicate-imports": "error",
-		"linebreak-style": ["error", "unix"],
 		"@typescript-eslint/promise-function-async": "error",
 		"@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
 		"@typescript-eslint/naming-convention": [
@@ -65,6 +73,13 @@ module.exports = {
 		"@typescript-eslint/interface-name-prefix": "off",
 		"@typescript-eslint/no-explicit-any": "error",
 		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/explicit-function-return-type": [
+			"off",
+			{
+				allowExpressions: true,
+				allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+			},
+		],
 		"no-nested-ternary": "off",
 		"simple-import-sort/imports": "warn",
 		"@typescript-eslint/member-ordering": [
@@ -100,5 +115,18 @@ module.exports = {
 				case: "camelCase",
 			},
 		],
+		"unicorn/prefer-node-protocol": "off",
+		"unicorn/prevent-abbreviations": [
+			"error",
+			{
+				replacements: {
+					i: false,
+				},
+			},
+		],
+		"unicorn/no-null": "off",
+		"unicorn/new-for-builtins": "off",
+		"unicorn/no-useless-undefined": "off",
+		"unicorn/prefer-string-replace-all": "off",
 	},
 };
