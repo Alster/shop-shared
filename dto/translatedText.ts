@@ -1,1 +1,3 @@
-export type TranslatedText = { [index: string]: string };
+import { LanguageEnum } from "../constants/localization";
+
+export type TranslatedText = Record<LanguageEnum, string>;

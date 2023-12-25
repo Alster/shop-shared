@@ -1,4 +1,4 @@
-import { Opaque } from "@/shop-shared/utils/opaque";
+import { Opaque } from "./opaque";
 
 const ProductColorSetSymbol: unique symbol = Symbol();
 
