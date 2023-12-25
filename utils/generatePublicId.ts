@@ -1,6 +1,7 @@
 /**
  * Generates public id from text
- * It gets title in "en" language and replace all spaces with "-"
+ * For example, pas here title in "en" language.
+ * Function will replace all spaces with "-".
  * All other symbols are removed
  */
 export function generatePublicId(text: string): string {
