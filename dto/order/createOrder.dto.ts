@@ -1,11 +1,9 @@
 import { NovaPoshtaDeliveryType } from "../../constants/checkout";
 import { CurrencyEnum } from "../../constants/exchange";
-import { ProductAttributesDto } from "../product/product.dto";
+import { ProductItemDto } from "../product/product.dto";
 
-export type CreateOrderItemDataDto = {
+export type CreateOrderItemDataDto = ProductItemDto & {
 	productId: string;
-	attributes: ProductAttributesDto;
-	qty: number;
 };
 
 export type DeliveryNVOfficeDto = {

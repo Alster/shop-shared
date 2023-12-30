@@ -7,6 +7,7 @@ export type ProductAttributesDto = { [index: string]: string[] };
 export interface ProductItemDto {
 	sku: string;
 	attributes: ProductAttributesDto;
+	images: string[];
 }
 
 export interface ProductDto {
@@ -21,7 +22,6 @@ export interface ProductDto {
 	quantity: number;
 	price: MoneySmall;
 	discount: number;
-	imagesByColor: Record<string, string[]>;
 	selectedColor: string;
 	active: boolean;
 	createDate: string;
@@ -40,7 +40,6 @@ export interface ProductAdminDto {
 	price: MoneySmall;
 	discount: number;
 	currency: CurrencyEnum;
-	imagesByColor: Record<string, string[]>;
 	active: boolean;
 	createDate: string;
 }
