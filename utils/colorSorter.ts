@@ -1,3 +1,4 @@
+import * as assert from "assert";
 // @ts-expect-error - no typings for this package
 import { fromString } from "css-color-converter";
 
@@ -40,6 +41,7 @@ const compareColors = (a: string, b: string): number => {
 	if (colorA !== null && colorB === null) {
 		return -1;
 	}
+	assert.ok(colorA !== null && colorB !== null);
 
 	// Move grey-ish values to the back
 	if (
