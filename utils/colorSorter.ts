@@ -9,8 +9,14 @@ interface IHSLA {
 	reference: string;
 }
 
-const convert = (color: string): IHSLA => {
-	const [hue, saturation, lightness, alpha] = fromString(color).toHslaArray();
+const convert = (color: string): IHSLA | null => {
+	const parsedColor = fromString(color);
+
+	if (parsedColor === null) {
+		return null;
+	}
+
+	const [hue, saturation, lightness, alpha] = parsedColor.toHslaArray();
 
 	return {
 		hue,
@@ -24,6 +30,16 @@ const convert = (color: string): IHSLA => {
 const compareColors = (a: string, b: string): number => {
 	const colorA = convert(a);
 	const colorB = convert(b);
+
+	if (colorA === null && colorB === null) {
+		return 0;
+	}
+	if (colorA === null && colorB !== null) {
+		return 1;
+	}
+	if (colorA !== null && colorB === null) {
+		return -1;
+	}
 
 	// Move grey-ish values to the back
 	if (

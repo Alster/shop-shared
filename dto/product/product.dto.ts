@@ -22,7 +22,7 @@ export interface ProductDto {
 	quantity: number;
 	price: MoneySmall;
 	discount: number;
-	selectedColor: string;
+	selectedItem: string | null;
 	active: boolean;
 	createDate: string;
 }
