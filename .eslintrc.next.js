@@ -1,7 +1,7 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
 	parser: "@typescript-eslint/parser",
-	plugins: ["jsx-a11y", "react", "react-hooks", "security", "prettier", "simple-import-sort"],
+	plugins: ["jsx-a11y", "react", "react-hooks"],
 	extends: [
 		"next/core-web-vitals",
 		"next",
@@ -9,8 +9,6 @@ module.exports = {
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:jsx-a11y/recommended",
-		"plugin:security/recommended",
-		"plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
 	],
 	rules: {
 		"@typescript-eslint/no-empty-function": "off",
