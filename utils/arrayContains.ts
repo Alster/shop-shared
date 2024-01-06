@@ -1,4 +1,4 @@
-export default function arrayContains<SuperString extends string>(
+export default function arrayContains<const SuperString extends string>(
 	array: ReadonlyArray<SuperString>,
 	searchElement: SuperString,
 ): boolean {
