@@ -2,7 +2,7 @@ import { CurrencyEnum } from "../../constants/exchange";
 import { MoneySmall } from "../primitiveTypes";
 import { TranslatedText } from "../translatedText";
 
-export type ProductAttributesDto = { [index: string]: readonly string[] };
+export type ProductAttributesDto = { [index: string]: string[] };
 
 export interface ProductItemDto {
 	sku: string;
