@@ -3,21 +3,26 @@ module.exports = {
 	parser: "@typescript-eslint/parser",
 	plugins: [
 		"@typescript-eslint/eslint-plugin",
-		"prettier",
-		"security",
 		"simple-import-sort",
 		"import",
 		"sonarjs",
 		"unicorn",
+		"security",
+		"prettier",
 	],
 	extends: [
-		"plugin:@typescript-eslint/recommended",
-		"plugin:security/recommended",
 		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
 		"plugin:import/typescript",
 		"plugin:sonarjs/recommended",
 		"plugin:unicorn/all",
-		"plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+		"plugin:security/recommended",
+		/*?💡
+        Enables eslint-plugin-prettier and eslint-config-prettier.
+        This will display prettier errors as ESLint errors.
+        Make sure this is always the last configuration in the extends array.
+         */
+		"plugin:prettier/recommended",
 	],
 	rules: {
 		"prettier/prettier": [
