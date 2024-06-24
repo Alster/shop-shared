@@ -1,5 +1,4 @@
-import getProductImageFilename from "@/shop-shared/utils/getProductImageFilename";
-
+import getProductImageFilename from "./getProductImageFilename";
 import ImagePostfixType from "./imagePostfixType";
 
 const imagesDomain = process.env["NEXT_PUBLIC_IMAGES_DOMAIN"] as string;
