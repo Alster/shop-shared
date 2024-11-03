@@ -1,10 +1,10 @@
 import getProductImageFilename from "./getProductImageFilename";
 import ImagePostfixType from "./imagePostfixType";
 
-const imagesDomain = process.env["NEXT_PUBLIC_IMAGES_DOMAIN"] as string;
+const imagesDomain = process.env["NEXT_PUBLIC_IMAGES_DOMAIN"]!;
 
 if (!imagesDomain) {
-	throw new Error(`Environment variable for imagesDomain is not set`);
+	throw new Error(`Environment variable for NEXT_PUBLIC_IMAGES_DOMAIN is not set`);
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

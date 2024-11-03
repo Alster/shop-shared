@@ -8,7 +8,6 @@ module.exports = {
 		"sonarjs",
 		"unicorn",
 		"security",
-		"prettier",
 	],
 	extends: [
 		"eslint:recommended",
@@ -17,33 +16,8 @@ module.exports = {
 		"plugin:sonarjs/recommended",
 		"plugin:unicorn/all",
 		"plugin:security/recommended",
-		/*?💡
-        Enables eslint-plugin-prettier and eslint-config-prettier.
-        This will display prettier errors as ESLint errors.
-        Make sure this is always the last configuration in the extends array.
-         */
-		"plugin:prettier/recommended",
 	],
 	rules: {
-		"prettier/prettier": [
-			"error",
-			{
-				singleQuote: false,
-				parser: "typescript",
-				endOfLine: "auto",
-				"no-console": "warn",
-			},
-		],
-		"max-len": [
-			"error",
-			{
-				code: 120,
-				tabWidth: 2,
-				ignoreUrls: true,
-				ignoreRegExpLiterals: true,
-				ignoreStrings: true,
-			},
-		],
 		"no-console": "warn",
 		"no-duplicate-imports": "error",
 		"@typescript-eslint/promise-function-async": "error",
