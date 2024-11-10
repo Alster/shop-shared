@@ -1,3 +1,5 @@
+import { buildUrl } from "@/shop-shared/utils/buildUrl";
+
 import getProductImageFilename from "./getProductImageFilename";
 import ImagePostfixType from "./imagePostfixType";
 
@@ -14,5 +16,5 @@ export default function getProductImageUrl<
 	const Postfix extends ImagePostfixType,
 >(productId: ProductId, imageId: ImageId, postfix: Postfix) {
 	const filename = getProductImageFilename(productId, imageId, postfix);
-	return `${imagesDomain}/${filename}` as const;
+	return buildUrl(imagesDomain, filename);
 }
