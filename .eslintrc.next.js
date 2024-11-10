@@ -1,13 +1,13 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
 	parser: "@typescript-eslint/parser",
-	plugins: ["jsx-a11y", "react", "react-hooks"],
+	plugins: ["jsx-a11y", "react", "tailwindcss"],
 	extends: [
 		"next/core-web-vitals",
 		"next",
+		"plugin:react-hooks/recommended",
 		"plugin:tailwindcss/recommended",
 		"plugin:react/recommended",
-		"plugin:react-hooks/recommended",
 		"plugin:jsx-a11y/recommended",
 	],
 	rules: {
